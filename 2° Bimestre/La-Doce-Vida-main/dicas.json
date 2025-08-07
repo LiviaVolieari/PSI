@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "titulo": "Dicas para congelar alimentos",
+        "imagem": "/static/images/congelar.jpg",
+        "resumo": "Aprenda as melhores técnicas para congelar alimentos sem perder nutrientes",
+        "conteudo": "Conteúdo detalhado sobre congelamento..."
+    },
+    {
+        "id": 2,
+        "titulo": "Como organizar sua despensa",
+        "imagem": "/static/images/despensa.jpg",
+        "resumo": "Dicas práticas para manter sua despensa organizada e funcional",
+        "conteudo": "Conteúdo detalhado sobre organização..."
+    }
+]

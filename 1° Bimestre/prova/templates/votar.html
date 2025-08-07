@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votar</title>
+    <style>
+    body {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    form select, input{
+        padding: 5px;
+        margin: 10px;
+        width: 15em;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Registrar voto</h1>
+
+    <form action="{{url_for ('votar') }}" method="post">
+        <input type="text" name="nome" placeholder="Nome">
+        <select name="genero" id="genero">
+            <option value="acao">Ação</option>
+            <option value="comedia">Comédia</option>
+            <option value="drama">Drama</option>
+        </select>
+
+        <button>Enviar</button>
+    </form>
+
+</body>
+</html>

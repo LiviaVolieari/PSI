@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block titulo %}Bem-vindo{% endblock %}
+{% block conteudo %}
+<p>Olá, {{ nome }}! Você está logado.</p>
+<a href="{{ url_for('logout') }}">Sair</a>
+{% endblock %}

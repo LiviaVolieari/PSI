@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Receitas - La Doce Vida{% endblock %}
+
+{% block conteudo %}
+
+<p>Quantidade de receitas: {{ receitas|length }}</p>
+  <h1>Receitas</h1>
+
+  <div class="receitas-lista">
+    {% if receitas %}
+      <ul>
+        {% for receita in receitas %}
+          <li class="receita-item">
+            <h2>{{ receita.titulo }}</h2>
+            <img src="{{ receita.imagem_url }}" alt="Foto de {{ receita.titulo }}" style="max-width:300px;">
+            <p><strong>Categoria:</strong> {{ receita.categoria }}</p>
+            <p><strong>Tempo de preparo:</strong> {{ receita.tempo_preparo }} minutos</p>
+            <p>{{ receita.descricao|truncate(150) }}</p>
+            
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há receitas cadastradas ainda.</p>
+    {% endif %}
+  </div>
+{% endblock %}

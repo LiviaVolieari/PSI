@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h2>Produtos</h2>
+<ul class="produtos">
+    {% for nome, preco in produtos.items() %}
+    <li>
+        <form action="{{ url_for('adicionar') }}" method="post" style="display:inline;">
+            <input type="hidden" name="prod" value="{{ nome }}">
+            
+           <div class="item_produto">
+            {{ nome }} - R$ {{ preco }}
+            <button type="submit">Adicionar</button>
+           </div>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

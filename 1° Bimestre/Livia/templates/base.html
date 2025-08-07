@@ -1,0 +1,13 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for categoria, msg in messages %}
+      {% if categoria == 'success' %}
+        <p style="color: green;">{{ msg }}</p>
+      {% elif categoria == 'danger' %}
+        <p style="color: red;">{{ msg }}</p>
+      {% else %}
+        <p style="color: blue;">{{ msg }}</p>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h2>Seu Carrinho</h2>
+
+<ul class="produtos">
+    {% for item in carrinho %}
+    <li>
+        <div class="item_produto">{{ item }} - R$ {{ produtos[item] }}
+            <form action="{{ url_for('remover') }}" method="post" style="display:inline;">
+                <input type="hidden" name="prod" value="{{ item }}">
+                <button type="submit">Remover</button>
+            </form></div>
+            
+    </li>
+    {% endfor %}
+    <button type="hidden"><a href="{{ url_for('produtos') }}">Voltar</a></button>
+</ul>
+<h3>Total: R$ {{ valor }}</h3>
+{% endblock %}
