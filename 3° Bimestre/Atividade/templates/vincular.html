@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Vincular Usuário a Time</h2>
+    <form method="POST">
+        Usuário:
+        <select name="usuario_id">
+            {% for u in usuarios %}
+                <option value="{{ u.id }}">{{ u.nome }}</option>
+            {% endfor %}
+        </select>
+        Time:
+        <select name="time_id">
+            {% for t in times %}
+                <option value="{{ t.id }}">{{ t.nome }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Vincular</button>
+    </form>
+
+    <a href="/">Voltar</a>
+
+</body>
+</html>
